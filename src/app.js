@@ -8,10 +8,10 @@ const eventosRoutes = require('./routes/eventosRoutes')
 
 const app = express();
 
-const urls_permitidas = ['http://localhost:4200/', 'http://3.85.154.121/']
+const urls_permitidas = ['http://localhost:4200/', 'http://3.85.154.121/'];
 
 app.use(bodyParser.json());
-app.use(cors({ origin: urls_permitidas}))
+app.use(cors());
 
 app.use('/salones', salonesRoutes);
 app.use('/inmuebles', inmueblesRoutes);
